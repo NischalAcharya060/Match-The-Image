@@ -32,7 +32,7 @@
             grid-gap: 2rem;
         }
 
-        /*.card{*/
+        /* .card{*/
         /*    width: 10rem;*/
         /*    height: 10rem;*/
         /*    background-color: var(--bg-card);*/
@@ -48,7 +48,7 @@
 
         /*.card_match{*/
         /*    border: .2rem solid purple;*/
-        /*}*/
+        /*} */
 
         .card {
             position: relative;
