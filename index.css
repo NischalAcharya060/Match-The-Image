@@ -1,0 +1,96 @@
+*{margin: 0; padding: 0;box-sizing: border-box}
+
+        :root{
+            --bg-main:#464646;
+            --bg-card:#2D2727;
+            --border-color: #efc745;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5rem;
+            height: 100vh;
+            background-color: var(--bg-main);
+        }
+
+        h1{
+            color: #fff;
+            font-family: "Lexend Deca Light";
+            font-size: 4rem;
+        }
+
+        span{
+            color: var(--border-color);
+        }
+
+        #card-section{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 2rem;
+        }
+
+        /*.card{*/
+        /*    width: 10rem;*/
+        /*    height: 10rem;*/
+        /*    background-color: var(--bg-card);*/
+        /*    background-size: contain;*/
+        /*    border-radius: .6rem;*/
+        /*    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;*/
+        /*    padding: 2rem;*/
+        /*}*/
+
+        /*.card_selected{*/
+        /*    border: .2rem solid var(--border-color);*/
+        /*}*/
+
+        /*.card_match{*/
+        /*    border: .2rem solid purple;*/
+        /*}*/
+
+        .card {
+            position: relative;
+            transition: all .4s linear;
+            transform-style: preserve-3d;
+        }
+
+        .card,
+        .back-card,
+        .front-card {
+            height: 10rem;
+            width: 10rem;
+        }
+
+        .back-card,
+        .front-card {
+            position: absolute;
+            backface-visibility: hidden;
+        }
+
+        .front-card {
+            background: var(--border-color);
+            background-size: contain;
+            border-radius: .6rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 2rem;
+        }
+
+        .back-card {
+            transform: rotateY(180deg);
+            /*background-color: #6589F9;*/
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            padding: 2rem;
+        }
+
+        .card_selected{
+            transform: rotateY(180deg);
+        }
+
+        .card_match .front-card{
+            background-color: var(--bg-card);
+        }
